@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>将具体时间转换为模糊相对时间的jQuery工具|DEMO_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
+	<style type="text/css">
+		.htmleaf-content{
+			width: 700px;
+			margin:30px auto;
+		}
+		pre{
+			font-family: "Microsoft YaHei","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif, FreeSans, Arimo;
+		}
+	</style>
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="htmleaf-container">
+		<header class="htmleaf-header">
+			<h1>将具体时间转换为模糊相对时间的jQuery工具 <span>A jQuery plugin to get "date ago" in realtime</span></h1>
+			<div class="htmleaf-links">
+				<a class="htmleaf-icon icon-htmleaf-home-outline" href="http://www.htmleaf.com/" title="jQuery之家" target="_blank"><span> jQuery之家</span></a>
+				<a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" href="http://www.htmleaf.com/jQuery/jquery-tools/201606223636.html" title="返回下载页" target="_blank"><span> 返回下载页</span></a>
+			</div>
+		</header>
+		<div class="htmleaf-content">
+			<h3>没有转换之前的时间</h3>
+			<pre>
+&lt;div&gt;2015-10-01 14:20:00&lt;/div&gt;
+&lt;div data-lta-value="2013-06-20 10:50:00"&gt;&lt;/div&gt;
+&lt;div data-lta-type="timestamp" data-lta-value="1466431440"&gt;&lt;/div&gt;			
+			</pre>
+			<h3>转换之后的时间</h3>
+			<div class="liveTime">2015-10-01 14:20:00</div>
+			<div class="liveTime" data-lta-value="2013-06-20 10:50:00"></div>
+			<div class="liveTime" data-lta-type="timestamp" data-lta-value="1466431440"></div>
+		</div>
+		<div class="related">
+		    <h3>如果你喜欢这个插件，那么你可能也喜欢:</h3>
+		    <a href="http://www.htmleaf.com/jQuery/Calendar-Date-Time-picker/201604273398.html">
+			  <img src="related/1.jpg" width="300" alt="基于格林威治标准时间（GMT）的jQuery模拟时钟插件"/>
+			  <h3>基于格林威治标准时间（GMT）的jQuery模拟时钟插件</h3>
+			</a>
+			<a href="http://www.htmleaf.com/jQuery/Calendar-Date-Time-picker/201508232459.html">
+			  <img src="related/2.jpg" width="300" alt="Bootstrap谷歌Material Design风格日期时间选择器"/>
+			  <h3>Bootstrap谷歌Material Design风格日期时间选择器</h3>
+			</a>
+		</div>
+	</div>
+	
+	<script src="http://libs.useso.com/js/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+	<script type="text/javascript" src="js/jquery.liveTimeAgo.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.liveTime').liveTimeAgo({
+				translate: {
+			        'year': '% 年前',
+			        'years': '% 年前',
+			        'month':'% 个月前',
+			        'months':'% 个月前',
+			        'day': '% 天前',
+			        'days': '% 天前',
+			        'hour': '% 小时前',
+			        'hours': '% 小时前',
+			        'minute': '% 分钟前',
+			        'minutes': '% 分钟前',
+			        'seconds': '几秒钟前',
+			        'error': '未知的时间',
+			    }
+			});
+		})
+	</script>
+</body>
+</html>
